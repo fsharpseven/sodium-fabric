@@ -1,70 +1,101 @@
-![Project icon](https://git-assets.jellysquid.me/hotlink-ok/sodium/icon-rounded-128px.png)
+<img src="common/src/main/resources/sodium-icon.png" width="128">
 
-# Sodium (for Fabric)
-![GitHub license](https://img.shields.io/github/license/jellysquid3/sodium-fabric.svg)
-![GitHub issues](https://img.shields.io/github/issues/jellysquid3/sodium-fabric.svg)
-![GitHub tag](https://img.shields.io/github/tag/jellysquid3/sodium-fabric.svg)
-[![Discord chat](https://img.shields.io/badge/chat%20on-discord-7289DA)](https://jellysquid.me/discord)
-[![CurseForge downloads](http://cf.way2muchnoise.eu/full_394468_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/sodium)
+# Sodium
 
-Sodium is a free and open-source optimization mod for the Minecraft client that improves frame rates, reduces
-micro-stutter, and fixes graphical issues in Minecraft. 
+Sodium is a powerful rendering engine and optimization mod for the Minecraft client which improves frame rates and reduces
+micro-stutter, while fixing many graphical issues in Minecraft.
 
-:warning: Sodium has had a lot of time to shape up lately, but the mod is still alpha software. You may run into small
-graphical issues or crashes while using it. Additionally, the
-[Fabric Rendering API](https://fabricmc.net/wiki/documentation:rendering) is not yet supported, which may cause crashes
-or prevent other mods from rendering correctly. Please be aware of these issues before using it in your game.
+**This mod is the result of thousands of hours of development, and is made possible thanks to players like you.** If you
+would like to show a token of your appreciation for my work, and help support the development of Sodium in the process,
+then consider [buying me a coffee](https://caffeinemc.net/donate).
 
-### Downloads
+<a href="https://caffeinemc.net/donate"><img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" width="180"/></a>
 
-You can find downloads for Sodium on either the [official CurseForge page](https://www.curseforge.com/minecraft/mc-mods/sodium)
-or through the [GitHub releases page](https://github.com/jellysquid3/sodium-fabric/releases). Usually, builds will be
-made available on GitHub slightly sooner than other locations.
+---
 
-### Community
+### 📥 Downloads
 
-If you'd like to get help with the mod, check out the latest developments, or be notified when there's a new release,
-the Discord community might be for you! You can join the official server for my mods by clicking
-[here](https://jellysquid.me/discord).
+#### Stable builds
 
-### Building from source
+The latest stable release of Sodium can be downloaded from our official [Modrinth](https://modrinth.com/mod/sodium) and
+[CurseForge](https://www.curseforge.com/minecraft/mc-mods/sodium) pages.
 
-If you're hacking on the code or would like to compile a custom build of Sodium from the latest sources, you'll want
-to start here.
+#### Nightly builds (for developers)
 
-#### Prerequisites
+We also provide bleeding-edge builds ("nightlies") which are useful for testing the very latest changes before they're
+packaged into a release. These builds are primarily intended for other mod developers and users with expert skills, and do
+not come with any support or warranty.
 
-You will need to install JDK 8 (or newer, see below) in order to build Sodium. You can either install this through
-a package manager such as [Chocolatey](https://chocolatey.org/) on Windows or [SDKMAN!](https://sdkman.io/) on other
-platforms. If you'd prefer to not use a package manager, you can always grab the installers or packages directly from
-[AdoptOpenJDK](https://adoptopenjdk.net/).
+For a complete listing of available nightly builds, please see [the wiki page](https://github.com/CaffeineMC/sodium/wiki/Nightly-Builds). We also have a Maven repository for including Sodium in your development workspace or build process, for which you can also find [documentation on our wiki](https://github.com/CaffeineMC/sodium/wiki/CaffeineMC-Maven-&-Config-API).
 
-On Windows, the Oracle JDK/JRE builds should be avoided where possible due to their poor quality. Always prefer using
-the open-source builds from AdoptOpenJDK when possible.
+### 🖥️ Installation
 
-#### Compiling
+Since the release of Sodium 0.6.0, both the _Fabric_ and _NeoForge_ mod loaders are supported. We generally recommend
+that new users prefer to use the _Fabric_ mod loader, since it is more lightweight and stable (for the time being.)
 
-Navigate to the directory you've cloned this repository and launch a build with Gradle using `gradlew build` (Windows)
-or `./gradlew build` (macOS/Linux). If you are not using the Gradle wrapper, simply replace `gradlew` with `gradle`
-or the path to it.
+For more information about downloading and installing the mod, please refer to our [Installation Guide](https://github.com/CaffeineMC/sodium/wiki/Installation).
 
-The initial setup may take a few minutes. After Gradle has finished building everything, you can find the resulting
-artifacts in `build/libs`.
+### 🙇 Getting Help
 
-### Tuning for optimal performance
+For technical support (including help with mod installation problems and game crashes), please use our
+[official Discord server](https://caffeinemc.net/discord).
 
-_This section is entirely optional and is only aimed at users who are interested in squeezing out every drop from their
-game. Sodium will work without issue in the default configuration of almost all launchers._
+### 📬 Reporting Issues
 
-Generally speaking, newer versions of Java will provide better performance not only when playing Minecraft, but when
-using Sodium as well. The default configuration your game launcher provides will usually be some old version of Java 8
-that has been selected to maximize hardware compatibility instead of performance.
+If you do not need technical support and would like to report an issue (bug, crash, etc.) or otherwise request changes
+(for mod compatibility, new features, etc.), then we encourage you to open an issue on the
+[project issue tracker](https://github.com/CaffeineMC/sodium/issues).
 
-For most users, these compatibility issues are not relevant, and it should be relatively easy to upgrade the game's Java
-runtime and apply the required patches. For more information on upgrading and tuning the Java runtime, see the
-guide [here](https://gist.github.com/jellysquid3/8a7b21e57f47f5711eb5697e282e502e).
+Please note that while the issue tracker is open to feature requests, development is primarily focused on
+improving compatibility, performance, and finishing any unimplemented features necessary for parity with
+the vanilla renderer.
 
-### License
+### 💬 Join the Community
 
-Sodium is licensed under GNU LGPLv3, a free and open-source license. For more information, please see the
-[license file](https://github.com/jellysquid3/sodium-fabric/blob/1.16.x/dev/LICENSE.txt).
+We have an [official Discord community](https://caffeinemc.net/discord) for all of our projects. By joining, you can:
+- Get installation help and technical support for all of our mods
+- Get the latest updates about development and community events
+- Talk with and collaborate with the rest of our team
+- ... and just hang out with the rest of our community.
+
+## ✅ Hardware Compatibility
+
+We only provide official support for graphics cards which have up-to-date drivers that are compatible with OpenGL 4.5
+or newer. Most graphics cards released in the past 12 years will meet these requirements, including the following:
+
+- AMD Radeon HD 7000 Series (GCN 1) or newer
+- NVIDIA GeForce 400 Series (Fermi) or newer
+- Intel HD Graphics 500 Series (Skylake) or newer
+
+Nearly all graphics cards that are already compatible with Minecraft (which requires OpenGL 3.3) should also work
+with Sodium. But our team cannot ensure compatibility or provide support for older graphics cards, and they may
+not work with future versions of Sodium.
+
+#### OpenGL Compatibility Layers
+
+Devices which need to use OpenGL translation layers (such as GL4ES, ANGLE, etc.) are not supported and will very likely
+not work with Sodium. These translation layers do not implement required functionality, and they suffer from underlying
+driver bugs which cannot be worked around.
+
+## 🛠️ Building from sources
+
+Sodium uses the [Gradle build tool](https://gradle.org/) and can be built with the `gradle build` command. The build
+artifacts (production binaries and their source bundles) can be found in the `build/mods` directory.
+
+The [Gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:using_wrapper) is provided for ease of use and will automatically download and install the
+appropriate version of Gradle for the project build. To use the Gradle wrapper, substitute `gradle` in build commands
+with `./gradlew.bat` (Windows) or `./gradlew` (macOS and Linux).
+
+### Build Requirements
+
+- OpenJDK 21
+    - We recommend using the [Eclipse Temurin](https://adoptium.net/) distribution as it's regularly tested by our developers and known
+      to be of high quality.
+- Gradle 8.10.x
+    - Typically, newer versions of Gradle will work without issues, but the build script is only tested against the
+      version used by the [wrapper script](/gradle/wrapper/gradle-wrapper.properties).
+
+## 📜 License
+
+Except where otherwise stated (see [third-party license notices](thirdparty/NOTICE.txt)), the content of this repository is provided
+under the [Polyform Shield 1.0.0](LICENSE.md) license by [JellySquid](https://jellysquid.me).
