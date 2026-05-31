@@ -1,5 +1,5 @@
 <img src="common/src/main/resources/sodium-icon.png" width="128">
-
+# [extremely out-of-date fork of sodium, now archived]
 # Sodium
 
 Sodium is a powerful rendering engine and optimization mod for the Minecraft client which improves frame rates and reduces
